@@ -8262,6 +8262,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 533077060069128896, guid: 3014c63ca87333b44a4c9607cfa98221, type: 3}
+      propertyPath: spriteSwitchTime
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 533077060069128898, guid: 3014c63ca87333b44a4c9607cfa98221, type: 3}
       propertyPath: m_RootOrder
       value: 1

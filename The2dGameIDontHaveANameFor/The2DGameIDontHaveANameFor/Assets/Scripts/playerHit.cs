@@ -6,6 +6,7 @@ public class playerHit : MonoBehaviour
 {
 
     public GameObject hit;
+    public float damage;
     public float waitTillDisappear; 
 
     // Start is called before the first frame update

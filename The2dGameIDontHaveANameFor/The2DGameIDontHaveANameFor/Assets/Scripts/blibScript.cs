@@ -6,7 +6,6 @@ public class blibScript : MonoBehaviour
 {
 
     public float HP;
-    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,4 +18,9 @@ public class blibScript : MonoBehaviour
         Debug.Log(HP);
     }
 
+    public void getDamage(float damage)
+    {
+        Debug.Log("Got Damage");
+        HP -= damage;
+    }
 }

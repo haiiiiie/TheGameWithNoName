@@ -6,21 +6,35 @@ public class blibScript : MonoBehaviour
 {
 
     public float HP;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.Log(HP);
-    }
+    public Sprite damageSprite;
+    public Sprite normalSprite;
+    public float spriteSwitchTime;
 
     public void getDamage(float damage)
     {
-        Debug.Log("Got Damage");
-        HP -= damage;
+        if ((HP - damage) < 1)
+        {
+            Debug.Log("Damage");
+            this.GetComponent<SpriteRenderer>().sprite = damageSprite;
+            changeSpriteToNormal();
+            Destroy(this.gameObject, .5f);
+            HP -= damage;
+            Debug.Log(HP);
+        }
+        else
+        {
+            Debug.Log("Damage");
+            this.GetComponent<SpriteRenderer>().sprite = damageSprite;
+            changeSpriteToNormal();
+            HP -= damage;
+            Debug.Log(HP);
+        }
+    }
+
+    public IEnumerator changeSpriteToNormal()
+    {
+        yield return new WaitForSeconds(spriteSwitchTime);
+        Debug.Log("Change back");
+        this.GetComponent<SpriteRenderer>().sprite = normalSprite;
     }
 }

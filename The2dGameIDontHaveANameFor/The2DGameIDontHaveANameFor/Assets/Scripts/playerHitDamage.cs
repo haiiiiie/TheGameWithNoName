@@ -14,9 +14,8 @@ public class playerHitDamage : MonoBehaviour
         damage = player.GetComponent<playerHit>().damage;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("tag: " + other.gameObject.tag);
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<blibScript>().getDamage(damage);
